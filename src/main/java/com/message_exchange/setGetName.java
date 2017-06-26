@@ -18,7 +18,7 @@ public class setGetName implements Callable
 		
         StringBuilder sb= new StringBuilder(msg);
 		 
-		 sb.replace(0, 6, "Malay");
+		 sb.replace(0, 7, "Malay");
 		 
 		 nmsg=sb.toString();
 		 return nmsg;

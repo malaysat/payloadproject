@@ -1,20 +1,20 @@
 package com.message_exchange;
 
-public class setGetMessage
+import org.mule.api.MuleEventContext;
+import org.mule.api.lifecycle.Callable;
+
+public class setGetMessage implements Callable
 {
-	String name="vishal Good Morning";
+	String message;
 	
-
-	public void setName(String name) {
+	@Override
+	public Object onCall(MuleEventContext eventContext) throws Exception {
 		// TODO Auto-generated method stub
 		
-		this.name=name;
+		message=eventContext.getMessageAsString();
 		
-	}
-
-	public String getName() {
-		// TODO Auto-generated method stub
-		return this.name;
+		
+		return message;
 	}
 
 
